@@ -1,0 +1,37 @@
+image: registry.console.elementai.com/snow.text2questions/contrastive_rl:latest
+
+interactive: false
+isProcessAgent: false
+maxRunTime: 0
+options:
+  sidecars:
+    tk-tunneling: null
+    x11:
+      gpu: false
+resources:
+  cpu: 8
+  gpu: 1
+  mem: 32
+  # gpuModel: A100-SXM4-40GB
+  # gpuMem: 40
+
+preemptable: true
+restartable: true
+
+data:
+  - snow.text2questions.data:/outputs
+  - snow.text2questions.rl_data:/data
+  - snow.text2questions.checkpoint:/checkpoints
+
+environmentVars:
+  - WANDB_API_KEY=9de538ad4cfd43217c67c20db4f9f07d8037a642
+  - WANDB_CONFIG_DIR=/outputs
+  - D4RL_DATASET_DIR=/data
+  - HOME=/opt
+
+workdir: /code
+
+command:
+  - /bin/bash
+  - -c
+  - while true; do sleep 60; done

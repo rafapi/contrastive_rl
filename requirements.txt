@@ -1,0 +1,20 @@
+d4rl @ git+https://github.com/rafapi/d4rl.git@master#egg=d4rl
+metaworld @ git+https://github.com/rlworkgroup/metaworld.git@a0009ed9a208ff9864a5c1368c04c273bb20dd06#egg=metaworld
+dm-acme==0.4.0
+dm-env==1.5
+dm-haiku==0.0.6
+dm-launchpad==0.5.0
+dm-reverb==0.7.0
+dm-sonnet==2.0.0
+dm-tree==0.1.7
+glfw==2.5.3
+gym==0.19.0
+jax==0.3.13
+jaxlib==0.3.10
+mujoco==2.2.0
+mujoco-py==2.0.2.7
+numpy==1.22.4
+optax==0.1.2
+protobuf==3.19.0
+scipy==1.8.1
+tqdm==4.64.0
